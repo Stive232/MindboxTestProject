@@ -1,8 +1,8 @@
 ﻿namespace MindboxTest
 {
-    internal class Circle : Figure
+    public class Circle : Figure
     {
-        private double _radius { get; set; }
+        private readonly double _radius;
 
         public Circle(double radius)
         {
@@ -11,6 +11,7 @@
         
         public override double GetArea()
         {
+            Validate();
             return Math.PI * _radius * _radius;
         }
 

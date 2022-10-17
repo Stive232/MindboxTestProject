@@ -1,20 +1,20 @@
 ﻿namespace MindboxTest
 {
-    internal class Triangle : Figure
+    public class Triangle : Figure
     {
-        private double _aSide { get; set; }
-        private double _bSide { get; set; }
-        private double _cSide { get; set; }
+        private readonly double _aSide;
+        private readonly double _bSide;
+        private readonly double _cSide;
 
         public Triangle(double aSide, double bSide, double cSide)
         {
             _aSide = aSide;
             _bSide = bSide;
             _cSide = cSide;
-            Validate();
         }
         public override double GetArea()
         {
+            Validate();
             double halfPerimeter = GetHalfPerimeter();
             return Math.Sqrt(halfPerimeter * (halfPerimeter - _aSide) * (halfPerimeter - _bSide) * (halfPerimeter - _cSide));
         }
