@@ -4,6 +4,5 @@
     {
         public abstract double GetArea();
         public abstract void Validate();
-
     }
 }

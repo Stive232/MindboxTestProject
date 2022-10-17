@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MindboxTest
+﻿namespace MindboxTest
 {
     internal class Circle : Figure
     {
@@ -20,7 +14,7 @@ namespace MindboxTest
             return Math.PI * _radius * _radius;
         }
 
-        public void Validate()
+        public override void Validate()
         {
             if (_radius <= 0)
             {
